@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to align sidenav and main content */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent body scroll if content overflows */
+}
+
+.sidenav {
+    height: 100%; /* Full height of the parent (body) */
+    width: 60px; /* Initial width of the closed sidenav */
+    position: fixed; /* Fixed position for the sidenav */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: white; /* Or any background you prefer */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 20px; /* Space from the top */
+}
+
+.sidenav a {
+    padding: 15px 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    font-size: 18px;
+    color: white; /* Text color inside buttons (though not visible in this design) */
+    display: block; /* Make the links block elements */
+    transition: 0.3s; /* Smooth transition for background color change */
+    width: 40px; /* Initial width of the colored square */
+    height: 40px; /* Initial height of the colored square */
+    margin-bottom: 10px; /* Space between buttons */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Specific background colors for each button */
+#green-btn {
+    background-color: #4CAF50; /* Green */
+}
+
+#blue-btn {
+    background-color: #2196F3; /* Blue */
+}
+
+#red-btn {
+    background-color: #f44336; /* Red */
+}
+
+#gray-btn {
+    background-color: #555; /* Dark Gray */
+}
+
+/* On hover, increase the width of the sidenav and change button colors */
+.sidenav a:hover {
+    width: 200px; /* Wider on hover, adjust as needed */
+    /* You can add text content here if you want to reveal it on hover */
+    /* For example: content: "Home"; */
+}
+
+/* Optional: You can change background color on hover if needed */
+#green-btn:hover {
+    background-color: #5cb85c;
+}
+#blue-btn:hover {
+    background-color: #0b7dda;
+}
+#red-btn:hover {
+    background-color: #da190b;
+}
+#gray-btn:hover {
+    background-color: #333;
+}
+
+
+.main-content {
+    margin-left: 80px; /* Adjust this to be slightly more than the sidenav's initial width */
+    padding: 20px;
+    flex-grow: 1; /* Allows the main content to take up remaining space */
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
